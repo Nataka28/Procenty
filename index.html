@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8" />
+    <title>Strona</title>
+    <style>
+        body{
+            background-color: black;
+            color: white;
+        }
+        div
+        {
+           
+            width: 440px;
+            border: 3px red solid;
+           padding: 30px 30px 30px 30px;
+           color: orange;
+           
+        }
+    </style>
+</head>
+<body>
+    <h1>Pytanie jak oceniasz swoją wiedzę?</h1>
+    <input id="pole1" type="number">
+    <button id="sprawdz" onclick="oblicz()">Sprawdź mnie</button>
+  <h2>  Ocena którą dostaniesz:</h2>
+  <h1><div id="wynik"></div></h1>
+  <script>
+    function oblicz()
+    {
+        var liczba=document.getElementById('pole1').value;
+         if (liczba>100)
+        {
+            document.getElementById('wynik').innerHTML='Podaj liczbe w zakresie <0;100>'
+        }
+        else if (liczba==100)
+        {
+            document.getElementById('wynik').innerHTML='6'
+        }
+        else if (liczba>=90)
+        {
+            document.getElementById('wynik').innerHTML='5'
+        }
+        else if (liczba>=75)
+        {
+            document.getElementById('wynik').innerHTML='4'
+        }
+        else if (liczba>=50)
+        {
+            document.getElementById('wynik').innerHTML='3'
+        }
+        else if (liczba>=30)
+        {
+            document.getElementById('wynik').innerHTML='2'
+        }
+        else if (liczba<0)
+        {
+            document.getElementById('wynik').innerHTML='Podaj liczbe w zakresie <0;100>'
+        }
+        else if (liczba<30)
+        {
+            document.getElementById('wynik').innerHTML='1'
+        }
+      
+    }
+    
+  </script>
+</body>
+</html>
